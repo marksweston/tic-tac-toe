@@ -1,0 +1,9 @@
+#! /usr/bin/env ruby
+require_relative '../lib/tic_tac_toe.rb'
+
+game = TicTacToe::Game.new
+game.start
+game.choose_player gets.chomp
+while move = gets.chomp
+  game.make_player_move move
+end
